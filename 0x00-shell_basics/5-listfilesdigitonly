@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l | sort -k4 -k3
+ls -l -a | sort -k3 -k4
