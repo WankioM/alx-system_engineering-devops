@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -v 0655 hello
+chmod u=r,g=rx,o=rxw
