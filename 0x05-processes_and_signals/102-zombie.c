@@ -1,6 +1,6 @@
 /*
  * File: 102-zombie.c
- * Auth: Brennan D Baraban
+ * Auth: Tracy Wankio M
  */
 
 #include <stdio.h>
