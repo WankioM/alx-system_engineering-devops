@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
-# Run Apache on the holbertonschool/265-0 Docker container.
+# Install and run Apache on the holbertonschool/265-0 Docker container.
 
-echo "ServerName localhost" >> /etc/apache2.conf
+# Update the package list and install Apache.
+apt-get update
+apt-get install -y apache2
+
+# Configure Apache to serve a page containing Hello Holberton.
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Start Apache.
 service apache2 start
