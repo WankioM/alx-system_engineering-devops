@@ -1,14 +1,8 @@
 #!/usr/bin/env bash
-# Install and run Apache on the holbertonschool/265-0 Docker container.
-
-# Update the package list and install Apache.
-apt-get update
-apt-get install -y apache2
-
-# Configure Apache to serve a page containing Hello Holberton.
-echo "Hello Holberton" > /var/www/html/index.html
-
-# Start Apache.
-service apache2 start
-
-docker run -p 8080:80 -d -it holbertonschool/265-0
+# Fixes the issue with the web server
+# DOCKER_CONT_ID=$(docker ps | grep 'holbertonschool/265-0' | cut -d ' ' -f1)
+# docker exec -i "$DOCKER_CONT_ID" \
+# 	/bin/bash -c "echo 'Hello Holberton' > /var/www/html/index.html"
+# docker exec -i "$DOCKER_CONT_ID" /bin/bash -c "sudo service apache2 start"
+echo 'Hello Holberton' > /var/www/html/index.html
+sudo service apache2 start
