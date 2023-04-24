@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Takes an employee ID. And returns the to do list """
 
-import urllib.request
 import json
 import sys
+import urllib.request
 
 url = "https://jsonplaceholder.typicode.com/"
 with urllib.request.urlopen(url + "users/{}".format(sys.argv[1])) as response:
